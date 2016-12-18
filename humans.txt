@@ -1,0 +1,10 @@
+/* TEAM */
+	Me: Zerss
+	Twitter: @Zerss
+	Contact: zersssin [at] gmail.com
+	From: Chambéry, France
+
+/* SITE */
+	Last update: 12/18/2016
+	Language: English
+	Doctype: HTML
