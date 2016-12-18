@@ -1,0 +1,17 @@
+body
+{
+	background: #9b59b6;
+}
+
+p
+{
+	color: white;
+	position: absolute;
+	font-size: 48px;
+	top: calc(50% - 24px);
+	margin: 0px;
+	width: 100%;
+	left: 0px;
+	font-family: Helvetica;
+	text-align: center;
+}
