@@ -59,13 +59,7 @@ th
 	      var date_evenement = new Date("Dec 19 21:45:00 2016");
 	      var total_secondes = (date_evenement - date_actuelle) / 1000;
 
-	      if (total_secondes < 0)
-	      {
-	        total_secondes = Math.abs(total_secondes);
-
-	      }
-
-	      if (total_secondes > 0)
+	      if (total_secondes > 1)
 	      {
 	        var jours = Math.floor(total_secondes / (60 * 60 * 24));
 	        var heures = Math.floor((total_secondes - (jours * 60 * 60 * 24)) / (60 * 60));
@@ -124,13 +118,12 @@ th
 	          et = "";
 	        }
 	        compte_a_rebours.innerHTML = "<table class='table'><tr><td style='width: 150px;'><center>" + jours + '</center></td><td style="width: 150px;"><center>' + heures + '</center></td><td style="width: 150px;"><center>' + minutes + '</center></td><td style="width: 150px;"><center>' + secondes + '</center></td></tr><tr><th style="width: 150px;"><center>' + mot_jour + '</center></th><th style="width: 150px;"><center>' + mot_heure + '</center></th><th style="width: 150px;"><center>' + mot_minute + '</center></th><th style="width: 150px;"><center>' + mot_seconde + '</center></th></tr></table>';
+	      var actualisation = setTimeout("compte_a_rebours();", 1000);
 	      }
 	      else
 	      {
-	        header("Location: index.php");
+	        compte_a_rebours.innerHTML = "<table class='table'><tr><td style='width: 150px;'><center>0</center></td><td style=\"width: 150px;\"><center>0</center></td><td style=\"width: 150px;\"><center>0</center></td><td style=\"width: 150px;\"><center>0</center></td></tr><tr><th style=\"width: 150px;\"><center>jour</center></th><th style=\"width: 150px;\"><center>heure</center></th><th style=\"width: 150px;\"><center>minute</center></th><th style=\"width: 150px;\"><center>seconde</center></th></tr></table><iframe style=\"display: none;\" width=\"1\" height=\"1\" src=\"https://www.youtube.com/embed/CFgNAjfwmvw?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>";
 	      }
-
-	      var actualisation = setTimeout("compte_a_rebours();", 1000);
 	    }
 	    compte_a_rebours();
 	    </script>
